@@ -78,7 +78,7 @@
             <activity android:name="com.facebook.FacebookActivity"
               android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
               android:label="@string/fb_app_name" />
-            <provider android:authorities="com.facebook.app.FacebookContentProvider$APP_ID"
+            <provider android:authorities="com.facebook.app.FacebookContentProvider${applicationId}$APP_ID"
               android:name="com.facebook.FacebookContentProvider"
               android:exported="true" />
         </config-file>
@@ -223,7 +223,7 @@
             <access origin="https://*.fbcdn.net" />
             <access origin="https://*.akamaihd.net" />
         </config-file>
-        
+
         <hook type="after_prepare" src="scripts/browser/after_prepare.js" />
     </platform>
 </plugin>
